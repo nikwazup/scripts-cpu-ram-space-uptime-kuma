@@ -1,0 +1,22 @@
+[Unit]
+
+Description=$choice Collector Service
+
+After=network.target
+
+
+
+[Service]
+
+ExecStart=/home/$username/collector_$choice.sh
+
+WorkingDirectory=/home/$username/
+
+Restart=always
+
+User=$username
+
+
+[Install]
+
+WantedBy=multi-user.target
